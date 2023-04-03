@@ -1,10 +1,24 @@
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const passport = require("passport");
 
-passport.use(new GoogleStrategy({
-clientID: '876687008029-racad9ri4fpoofmvhphnj4c32c27q0pr.apps.googleusercontent.com',
-clientSecret: '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',
-callbackURL: '/auth/google/callback'
-}, (accessToken, refreshToken, profile, done) => {
-// Add code here to handle user authentication
-}));
+passport.use(
+	new GoogleStrategy(
+		{
+			clientID: process.env.CLIENT_ID,
+			clientSecret: process.env.CLIENT_SECRET,
+			callbackURL: "/auth/google/callback",
+			scope: ["profile", "email"],
+		},
+		function (accessToken, refreshToken, profile, callback) {
+			callback(null, profile);
+		}
+	)
+);
+
+passport.serializeUser((user, done) => {
+	done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+	done(null, user);
+});
