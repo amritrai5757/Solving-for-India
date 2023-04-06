@@ -13,9 +13,9 @@ html {
 }
 
 body {
-    cursor: url(images/cursor2.png), auto;
+    cursor: url(../images/cursor2.png), auto;
     height: auto;
-    background-image: url(images/bck2.png);
+    background-image: url(../images/bck2.png);
     background-attachment: fixed;
 }
 
@@ -78,7 +78,7 @@ a {
     font-size: 1.6rem;
     font-weight: 400;
     color: #ffffff;
-    cursor: url(images/cursor2.png), auto;
+    cursor: url(../images/cursor2.png), auto;
 }
 
 .nav-link:hover {
@@ -87,7 +87,7 @@ a {
 
 .nav-logo {
     width: 6%;
-    cursor: url(images/cursor2.png), auto;
+    cursor: url(../images/cursor2.png), auto;
 }
 
 .profile {
@@ -112,7 +112,7 @@ a {
 
 .landing {
     height: 100vh;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     /* background-color: #63d471;
     background-image: linear-gradient(315deg, #63d471 0%, #233329 74%); */
     display: flex;
