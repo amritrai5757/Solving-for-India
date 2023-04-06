@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>KhetiFy</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">
+        <img class="logo" src="images/logo.png" alt="">
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Community</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+        <div class="icons">
+          <li class="nav-item">
+            <a href="#"><img class="weather" src="images/weather.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><img class="lang" src="images/lang.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><img class="priflileImg" src="images/profile.png" alt=""></a>
+          </li>
+        </div>
+
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="landing">
+    <div>
+      <div class="cow"><img src="images/cow.png" alt=""></div>
+      <h1 class="title">KhetiFy</h1>
+      <p>“Cultivate the land, harvest a future"</p>
+    </div>
+  </section>
+  <!-- aboutSection -->
+  <section class="about">
+    <h1 class="aboutTitle">About</h1>
+    <p class="aboutText">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae totam, possimus iusto distinctio obcaecati sit ipsam facere aliquam illo sapiente provident dolore magni repellat itaque, odit quis? Ex id laboriosam facere vero possimus perspiciatis, dolores odio. Mollitia est voluptates corporis qui reiciendis. Porro rerum deserunt minus nihil delectus quisquam voluptatibus, nisi consequatur, sit asperiores harum vero minima nostrum labore velit cumque? Dolor placeat, eius molestias, cumque sunt animi odit minus possimus perspiciatis, deserunt voluptas aliquam sit ipsam! Cumque rem ab, doloribus, officia culpa id exercitationem error dolores, ratione magni nemo deserunt quo animi eos. Deleniti quasi odit libero non.
+    </p>
+    <div class="searchContainer">
+      <h2 class="searchText">Learn about what you want to grow....</h2>
+      <form>
+        <input type="text" placeholder="Enter a crop name...">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- manageSection -->
+  <section class="manage">
+    <h3 class="titlePosition2">Manage your Farm!</h3>
+    <!-- <button class="button" onclick="showInventory()">View Inventory</button>
+            <button class="button" onclick="showChat()">Community Chat</button> -->
+    <nav class=buttonDesign>
+      <ul>
+        <li class="viewButton" onclick="showInventory()">
+          <div class="button-contenttt">
+            View Inventory
+          </div>
+          <span></span><span></span><span></span><span></span>
+        </li>
+        <li class="chatButton" onclick="showChat()">
+          <div class="button-contenttt">
+            Community Chat
+          </div>
+          <span></span><span></span><span></span><span></span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="card" id="inventoryCard">
+      <h2>Inventory Card</h2>
+      <h2>This is the inventory card.</h2>
+      <button onclick="hideCard()">Close</button>
+    </div>
+
+    <div class="card" id="chatCard">
+      <h2>Chat Card</h2>
+      <h2>This is the chat card.</h2>
+      <button onclick="hideCard()">Close</button>
+    </div>
+  </section>
+
+  <!-- StatsSection -->
+  <section class="stats">
+    <div class="stats1">
+      <p>
+        Plant Growth Activity
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+
+    <div class="stats1">
+      <p>
+        If required, use this Card, else remove it.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+
+    <div class="stats1">
+      <p>
+        Plant details
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+  </section>
+
+  <!-- footerSection -->
+    <!-- footerSection -->
+    <section class="foot">
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2023 KhetiFy | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
