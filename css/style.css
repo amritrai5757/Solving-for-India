@@ -452,8 +452,8 @@ button[type="submit"]:hover {
 .footer {
     position: relative;
     width: 100%;
-    /* background: #3586ff; */
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    background: #318f3f;
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% ); */
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
