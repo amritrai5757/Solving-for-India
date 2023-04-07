@@ -100,6 +100,7 @@ a {
 
 .lang {
     width: 40px;
+    filter: invert(100);
 }
 
 .priflileImg {
