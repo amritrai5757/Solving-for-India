@@ -9,6 +9,12 @@ body{
     overflow: hidden;
 }
 
+.homepage{
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	
+}
 .wave{
 	position: fixed;
 	bottom: 0;
