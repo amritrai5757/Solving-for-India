@@ -1,3 +1,3 @@
-##KhetiFy
+#KhetiFy
 
-project for GeeksForGeeks solving for India Hackathon
+Project for GeeksForGeeks solving for India Hackathon
