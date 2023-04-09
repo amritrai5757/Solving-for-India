@@ -10,6 +10,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     height: auto;
     background-image: url(../images/bck2.png);
     background-attachment: fixed;
+    background-size: cover;
 }
 
 li {
@@ -570,7 +572,7 @@ backdrop-filter: brightness();
 }
 
 .popup-overlay {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     position: fixed;
     top: 0;
     left: 0;
@@ -585,7 +587,7 @@ backdrop-filter: brightness();
     position: relative;
     width: 400px;
     height: 105px;
-    background: #18d8ffd1;
+    background: #a8ffffa1;
     padding: 20px 32px;
     overflow: hidden;
     border-radius: 18px;

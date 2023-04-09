@@ -1,47 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Animated Login Form</title>
-	<link rel="stylesheet" type="text/css" href="../css/login.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>KhetiFy</title>
 </head>
+
 <body>
-	<a href="../index.html" class="homepage"><i class="fas fa-home"></i></a>
-	<img class="wave" src="../images/wave.png">
-	<div class="container">
-		<div class="img">
-			<img src="../images/bg.svg">
-		</div>
-		<div class="login-content">
-			<form action="index.html">
-				<img src="../images/avatar.svg">
-				<h2 class="title">Welcome</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		      <i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-				<input type="submit" class="btn" value="Signup With Google">
-            </form>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">
+        <img class="logo" src="../images/logo.png" alt="">
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Community</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="../Contact/index.html" class="nav-link">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a href="#footer" class="nav-link">Contact</a>
+        </li>
+        <div class="icons">
+          <li class="nav-item" id="weather">
+            <a href="#"><img class="weather" src="../images/weather.png" alt=""></a>
+            <div class="popup">
+              <div class="popup-content">
+                <div id="mainBody">
+                  <div class="container">
+                      <div class="search-box">
+                          <i class="fa-solid fa-location-dot"></i>
+                          <input id="search-field" type="text" placeholder="Enter your location">
+                          <button class="fa-solid fa-magnifying-glass"></button>
+                      </div>
+                      <div class="not-found">
+                          <img src="../images/404.png" alt="">
+                          <p>
+                              Oppsies!! Not Found :/ LMAO!
+                          </p>
+                      </div>
+                      <div class="weather-box">
+                          <img src="">
+                          <p class="temperature"></p>
+                          <p class="description"></p>
+                      </div>
+                      <div class="weather-details">
+                          <div class="humidity">
+                              <i class="fa-solid fa-water"></i>
+                              <div class="text">
+                                  <span></span>
+                                  <p>humidity</p>
+                              </div>
+                          </div>
+                          <div class="wind">
+                              <i class="fa-solid fa-wind"></i>
+                              <div class="text">
+                                  <span></span>
+                                  <p>Wind Speed</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </li>
+          <div class="popup-overlay"></div>
+          <li class="nav-item">
+            <a href="#"><img class="lang" src="../images/lang.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html"><img class="priflileImg" src="../images/profile.png" alt=""></a>
+          </li>
         </div>
+
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="landing">
+    <div>
+      <div class="cow"><img src="../images/cow.png" alt=""></div>
+      <h1 class="title">KhetiFy</h1>
+      <p>“Cultivate the land, harvest a future"</p>
     </div>
-    <script type="text/javascript" src="../js/login.js"></script>
+  </section>
+  <!-- aboutSection -->
+  <section class="about" id="about">
+    <h1 class="aboutTitle">About</h1>
+    <p class="aboutText">
+      Welcome to our website dedicated to agriculture technology and farming! We are committed to providing innovative
+      solutions that help farmers manage their farms more efficiently and effectively. Our platform offers a range of
+      tools and resources, including crop management systems, weather forecasting, and market analysis, to help farmers
+      optimize their yields and improve their profitability. In addition, we provide a marketplace for farmers to sell
+      their crops and vegetables directly to consumers, cutting out the middlemen and ensuring fair prices for both
+      parties. Join us in embracing the future of farming and growing together!
+    </p>
+    <div class="searchContainer">
+      <h2 class="searchText">Learn about what you want to grow....</h2>
+      <form>
+        <input type="text" placeholder="Enter a crop name...">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- manageSection -->
+  <section class="manage">
+    <h3 class="titlePosition2">Manage your Farm!</h3>
+    <!-- <button class="button" onclick="showInventory()">View Inventory</button>
+            <button class="button" onclick="showChat()">Community Chat</button> -->
+    <nav class=buttonDesign>
+      <ul>
+        <li class="viewButton" onclick="showInventory()">
+          <div class="button-contenttt">
+            View Inventory
+          </div>
+          <span></span><span></span><span></span><span></span>
+        </li>
+        <li class="chatButton" onclick="showChat()">
+          <div class="button-contenttt">
+            Community Chat
+          </div>
+          <span></span><span></span><span></span><span></span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="card" id="inventoryCard">
+      <h2>Inventory Card</h2>
+      <h2>This is the inventory card.</h2>
+      <button onclick="hideCard()">Close</button>
+    </div>
+
+    <div class="card" id="chatCard">
+      <h2>Chat Card</h2>
+      <h2>This is the chat card.</h2>
+      <button onclick="hideCard()">Close</button>
+    </div>
+  </section>
+
+  <!-- StatsSection -->
+  <section class="stats">
+    <div class="stats1">
+      <p>
+        Plant Growth Activity
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+
+    <div class="stats1">
+      <p>
+        If required, use this Card, else remove it.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+
+    <div class="stats1">
+      <p>
+        Plant details
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
+        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
+        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
+        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
+        quo mollitia doloribus!
+      </p>
+    </div>
+  </section>
+
+  <!-- popup caht -->
+  <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank"><div class="bubble">
+    <div class="bubble-icon">
+      <img src="../images/comment.svg" alt="">
+      Chat with Ai
+    </div>
+  </div>
+</a>
+  
+  
+  <!-- footerSection -->
+  <!-- footerSection -->
+  <section class="foot" id="footer">
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="../Contact/index.html">Feedback</a></li>
+
+      </ul>
+      <p>&copy;2023 KhetiFy | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </section>
+
+  <script src="https://kit.fontawesome.com/d567ec31b5.js" crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

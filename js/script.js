@@ -56,11 +56,18 @@ window.addEventListener('resize', () => {
 
 const container = document.querySelector('.container');
 const search = document.querySelector('.search-box button');
+const searchBox = document.getElementById('search-field');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
+search.addEventListener('click', searchFunction);
+searchBox.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      searchFunction();
+    }
+  });
 
-search.addEventListener('click', ()=>{
+function searchFunction(){
     const APIKey = '74ec9acfe98d4b49f47bd9135d855b30';
     const city = document.querySelector('.search-box input').value;
     if(city === ''){
@@ -85,22 +92,22 @@ search.addEventListener('click', ()=>{
 
         switch(json.weather[0].main){
             case 'Clear':
-                image.src = 'images/clear.png';
+                image.src = '../images/clear.png';
                 break;
             case 'Rain':
-                image.src = 'images/rain.png';
+                image.src = '../images/rain.png';
                 break;
             case 'Snow':
-                image.src = 'images/snow.png';
+                image.src = '../images/snow.png';
                 break;
             case 'Clound':
-                image.src = 'images/cloud.png';
+                image.src = '../images/cloud.png';
                 break;
             case 'Haze':
-                image.src = 'images/mist.png';
+                image.src = '../images/mist.png';
                 break;
             default:
-                image.src = 'images/default.png';
+                image.src = '../images/default.png';
         }
         temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
         description.innerHTML = `${json.weather[0].description}`;
@@ -112,5 +119,5 @@ search.addEventListener('click', ()=>{
         weatherBox.classList.add('fadeIn');
         weatherDetails.classList.add('fadeIn');
         container.style.height = '590px';
-    });
-});
+    });
+};
