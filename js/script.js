@@ -119,5 +119,30 @@ function searchFunction(){
         weatherBox.classList.add('fadeIn');
         weatherDetails.classList.add('fadeIn');
         container.style.height = '590px';
-    });
+    });
 };
+
+const popupLink = document.querySelector('#langLink');
+const pContent = document.querySelector('#langPop');
+
+popupLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (pContent.style.display === 'block') {
+        pContent.style.display = 'none';
+    } else {
+        pContent.style.display = 'block';
+      const linkRect = popupLink.getBoundingClientRect();
+      pContent.style.top = linkRect.bottom + 'px';
+      pContent.style.left = linkRect.left + 'px';
+    }
+  });
+
+  pContent.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+  
+  document.addEventListener('click', (event) => {
+    if (!popupLink.contains(event.target) && !pContent.contains(event.target)) {
+        pContent.style.display = 'none';
+    }
+  });

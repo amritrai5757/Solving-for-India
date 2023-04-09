@@ -105,6 +105,59 @@ a {
     filter: invert(100);
 }
 
+#langPop {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: auto;
+    background-color: #ba9500cf;
+    border: none;
+    margin-top: 16px;
+    padding: 20px;
+    z-index: 999;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-40%);
+}
+
+/* #langPop::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
+} */
+
+.langBtn{
+    text-decoration: none;
+    color: white;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.popup-buttons button {
+    border: none;
+    border-radius: 20px;
+    padding: 7px 10px;
+    margin: 0 5px;
+    color: #fff;
+}
+
+.popup-buttons button.english {
+    background-color: #0077ff;
+}
+
+.popup-buttons button.hindi {
+    background-color: #ff6600;
+}
+
 .priflileImg {
     width: 40px;
 }
@@ -249,10 +302,10 @@ button[type="submit"]:hover {
 
 /* manageSection */
 .manage {
-background-image: url(../images/manage.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-backdrop-filter: brightness();
+    background-image: url(../images/manage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness();
 
 }
 
@@ -814,6 +867,7 @@ backdrop-filter: brightness();
     .landing div p {
         font-size: 3em;
     }
+
     .popup {
         width: 95%;
         height: 95%;
@@ -926,6 +980,10 @@ backdrop-filter: brightness();
         padding: 0;
         padding-bottom: 30px;
     }
+    #langPop{
+        margin-top: -30px;
+        left: 10%;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -1004,11 +1062,13 @@ backdrop-filter: brightness();
         font-size: 16px;
 
     }
-    .search-box input::placeholder{
+
+    .search-box input::placeholder {
         text-align: start;
         font-size: 10px;
         font-weight: 100;
     }
+
     .search-box button {
         width: 45px;
         height: 45px;

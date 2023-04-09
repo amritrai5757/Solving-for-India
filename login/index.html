@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <title>KhetiFy</title>
 </head>
@@ -39,46 +39,52 @@
               <div class="popup-content">
                 <div id="mainBody">
                   <div class="container">
-                      <div class="search-box">
-                          <i class="fa-solid fa-location-dot"></i>
-                          <input id="search-field" type="text" placeholder="Enter your location">
-                          <button class="fa-solid fa-magnifying-glass"></button>
+                    <div class="search-box">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <input id="search-field" type="text" placeholder="Enter your location">
+                      <button class="fa-solid fa-magnifying-glass"></button>
+                    </div>
+                    <div class="not-found">
+                      <img src="../images/404.png" alt="">
+                      <p>
+                        Oppsies!! Not Found :/ LMAO!
+                      </p>
+                    </div>
+                    <div class="weather-box">
+                      <img src="">
+                      <p class="temperature"></p>
+                      <p class="description"></p>
+                    </div>
+                    <div class="weather-details">
+                      <div class="humidity">
+                        <i class="fa-solid fa-water"></i>
+                        <div class="text">
+                          <span></span>
+                          <p>humidity</p>
+                        </div>
                       </div>
-                      <div class="not-found">
-                          <img src="../images/404.png" alt="">
-                          <p>
-                              Oppsies!! Not Found :/ LMAO!
-                          </p>
+                      <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="text">
+                          <span></span>
+                          <p>Wind Speed</p>
+                        </div>
                       </div>
-                      <div class="weather-box">
-                          <img src="">
-                          <p class="temperature"></p>
-                          <p class="description"></p>
-                      </div>
-                      <div class="weather-details">
-                          <div class="humidity">
-                              <i class="fa-solid fa-water"></i>
-                              <div class="text">
-                                  <span></span>
-                                  <p>humidity</p>
-                              </div>
-                          </div>
-                          <div class="wind">
-                              <i class="fa-solid fa-wind"></i>
-                              <div class="text">
-                                  <span></span>
-                                  <p>Wind Speed</p>
-                              </div>
-                          </div>
-                      </div>
+                    </div>
                   </div>
-              </div>
+                </div>
               </div>
             </div>
           </li>
           <div class="popup-overlay"></div>
-          <li class="nav-item">
+          <li class="nav-item" id="langLink">
             <a href="#"><img class="lang" src="../images/lang.png" alt=""></a>
+            <div id="langPop">
+              <div class="popup-buttons">
+                <button class="english"><a href="#" class="langBtn">English</a></button>
+                <button class="hindi"><a href="#" class="langBtn">Hindi</a></button>
+              </div>
+            </div>
           </li>
           <li class="nav-item">
             <a href="../index.html"><img class="priflileImg" src="../images/profile.png" alt=""></a>
@@ -195,15 +201,16 @@
   </section>
 
   <!-- popup caht -->
-  <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank"><div class="bubble">
-    <div class="bubble-icon">
-      <img src="../images/comment.svg" alt="">
-      Chat with Ai
+  <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank">
+    <div class="bubble">
+      <div class="bubble-icon">
+        <img src="../images/comment.svg" alt="">
+        Chat with Ai
+      </div>
     </div>
-  </div>
-</a>
-  
-  
+  </a>
+
+
   <!-- footerSection -->
   <!-- footerSection -->
   <section class="foot" id="footer">
@@ -244,4 +251,5 @@
   <script src="https://kit.fontawesome.com/d567ec31b5.js" crossorigin="anonymous"></script>
   <script src="../js/script.js"></script>
 </body>
+
 </html>
