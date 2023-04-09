@@ -37,21 +37,21 @@ const popupContent = document.querySelector('.popup-content');
 const popupOverlay = document.querySelector('.popup-overlay');
 
 bubble.addEventListener('click', () => {
-  popup.classList.add('popup-open');
-  popupOverlay.style.display = 'block';
-  document.body.style.overflow = 'hidden';
+    popup.classList.add('popup-open');
+    popupOverlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 });
 
 popupOverlay.addEventListener('click', () => {
-  popup.classList.remove('popup-open');
-  popupOverlay.style.display = 'none';
-  document.body.style.overflow = 'auto';
+    popup.classList.remove('popup-open');
+    popupOverlay.style.display = 'none';
+    document.body.style.overflow = 'auto';
 });
 
 window.addEventListener('resize', () => {
-  if (popup.classList.contains('popup-open')) {
-    popup.style.top = `${window.innerHeight / 2}px`;
-  }
+    if (popup.classList.contains('popup-open')) {
+        popup.style.top = `${window.innerHeight / 2}px`;
+    }
 });
 
 const container = document.querySelector('.container');
@@ -61,20 +61,20 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 search.addEventListener('click', searchFunction);
-searchBox.addEventListener('keydown', function(event) {
+searchBox.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      searchFunction();
+        searchFunction();
     }
-  });
+});
 
-function searchFunction(){
+function searchFunction() {
     const APIKey = '74ec9acfe98d4b49f47bd9135d855b30';
     const city = document.querySelector('.search-box input').value;
-    if(city === ''){
+    if (city === '') {
         return;
     }
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then(json => {
-        if(json.cod === '404'){
+        if (json.cod === '404') {
             container.style.height = '400px';
             weatherBox.style.display = 'none';
             weatherDetails.style.display = 'none';
@@ -86,11 +86,11 @@ function searchFunction(){
         error404.classList.remove('fadeIn');
         const image = document.querySelector('.weather-box img');
         const temperature = document.querySelector('.weather-box .temperature');
-        const description  = document.querySelector('.weather-box .description');
+        const description = document.querySelector('.weather-box .description');
         const humidity = document.querySelector('.weather-details .humidity span');
         const wind = document.querySelector('.weather-details .wind span');
 
-        switch(json.weather[0].main){
+        switch (json.weather[0].main) {
             case 'Clear':
                 image.src = '../images/clear.png';
                 break;
@@ -131,18 +131,66 @@ popupLink.addEventListener('click', (event) => {
         pContent.style.display = 'none';
     } else {
         pContent.style.display = 'block';
-      const linkRect = popupLink.getBoundingClientRect();
-      pContent.style.top = linkRect.bottom + 'px';
-      pContent.style.left = linkRect.left + 'px';
+        const linkRect = popupLink.getBoundingClientRect();
+        pContent.style.top = linkRect.bottom + 'px';
+        pContent.style.left = linkRect.left + 'px';
     }
-  });
+});
 
-  pContent.addEventListener('click', (event) => {
+pContent.addEventListener('click', (event) => {
     event.stopPropagation();
-  });
-  
-  document.addEventListener('click', (event) => {
+});
+
+document.addEventListener('click', (event) => {
     if (!popupLink.contains(event.target) && !pContent.contains(event.target)) {
         pContent.style.display = 'none';
     }
-  });
+});
+
+// Load JSON file
+var cropData = null;
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        cropData = JSON.parse(xhr.responseText);
+    }
+};
+xhr.open("GET", "../assets/crops.json", true);
+xhr.send();
+
+// Search for crop details
+function searchCrop() {
+    var cropName = document.getElementById("cropSearch").value;
+    var cropDetails = null;
+
+    // Find crop in JSON data
+    for (var i = 0; i < cropData.crops.length; i++) {
+        if (cropData.crops[i].name.toLowerCase() === cropName.toLowerCase()) {
+            cropDetails = cropData.crops[i];
+            break;
+        }
+    }
+
+    // Display popup with crop details
+    if (cropDetails != null) {
+        document.getElementById("popupTitle").innerHTML = cropDetails.name;
+        document.getElementById("popupDetails").innerHTML = `<div class = "grid"><br><span>🛒 Items Needed:</span><br> ► ` + cropDetails.items_needed.join(" • ") + `</div><div class = "grid"><br><span>🌪️ Atmosphere:</span><br> ► ` + cropDetails.atmosphere + `</div><div class = "grid"><br><span>⏳ Time Duration:</span><br> ► ` + cropDetails.time_duration + `</div><div class = "grid"><br><span>🌤️ Season:</span><br> ► ` + cropDetails.season + `</div><div class = "grid"><br><span>🌦️ Climate:</span><br> ► ` + cropDetails.climate + `</div>`;
+        document.documentElement.classList.add("popup-open");
+    }
+    else{
+        document.getElementById("popupTitle").innerHTML = "Nothing Found";
+        document.getElementById("popupDetails").innerHTML = "Go away";
+        document.documentElement.classList.add("popup-open");
+    }
+}
+
+// Close popup
+function closePopup() {
+    document.documentElement.classList.remove("popup-open");
+}
+
+window.addEventListener("click", function (event) {
+    if (event.target === document.getElementById("searchPop")) {
+        closePopup();
+    }
+});

@@ -122,8 +122,15 @@
     <div class="searchContainer">
       <h2 class="searchText">Learn about what you want to grow....</h2>
       <form>
-        <input type="text" placeholder="Enter a crop name...">
-        <button type="submit">Go</button>
+        <input type="text" placeholder="Enter a crop name..." id="cropSearch">
+        <button onclick="searchCrop()" type="submit">Search</button>
+        <div id="searchPop">
+          <div id="popupContent">
+            <div id="popupTitle"></div>
+            <div id="popupDetails"></div>
+            <div id="closeButton" onclick="closePopup()">&times;</div>
+          </div>
+        </div>
       </form>
     </div>
   </section>

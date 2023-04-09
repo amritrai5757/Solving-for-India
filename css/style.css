@@ -300,6 +300,115 @@ button[type="submit"]:hover {
     background-color: #ff7f6d;
 }
 
+#searchPop {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+	z-index: 999;
+}
+
+#popupContent {
+	position: absolute;
+    color: black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	height: 75%;
+	background-color: rgba(255, 233, 203, 0.949);
+	border-radius: 20px;
+	padding:  50px 80px 20px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
+	text-align: start;
+}
+
+#popupTitle {
+	font-size: 96px;
+	font-weight: bold;
+	margin-bottom: 20px;
+    color: rgb(85, 85, 85);
+}
+
+#popupDetails {
+    font-size: 20px;
+	font-weight: bold;
+    padding: 20px;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    color: red;
+}
+
+.grid{
+    font-size: 21px;
+    padding: 10px;
+}
+
+#popupDetails span{
+    text-align: justify;
+    font-size: 30px;
+    /* padding: 5px; */
+}
+
+.popup-text {
+	font-size: 360px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#closeButton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#closeButton:hover {
+	color: red;
+}
+
+.popup-open {
+	overflow: hidden;
+}
+
+.popup-open #searchPop {
+	display: block;
+}
+
+.popup-open #searchPop:after {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.popup-open #popupContent {
+	animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+	from {
+		top: -500px;
+	}
+	to {
+		top: 50%;
+	}
+}
+
 /* manageSection */
 .manage {
     background-image: url(../images/manage.jpg);
