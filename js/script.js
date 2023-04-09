@@ -39,7 +39,7 @@ window.addEventListener('resize', () => {
 });
 
 const container = document.querySelector('.container');
-const search = document.querySelector('.search-box button');
+const search = document.querySelector('.search-box #weatherButton');
 const searchBox = document.getElementById('search-field');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
@@ -134,6 +134,7 @@ document.addEventListener('click', (event) => {
 // Load JSON file
 var cropData = null;
 var xhr = new XMLHttpRequest();
+const searchBtn = document.querySelector('#searchCropbar')
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         cropData = JSON.parse(xhr.responseText);
@@ -143,6 +144,7 @@ xhr.open("GET", "../assets/crops.json", true);
 xhr.send();
 
 // Search for crop details
+searchBtn.addEventListener('click', searchCrop);
 function searchCrop() {
     var cropName = document.getElementById("cropSearch").value;
     var cropDetails = null;
@@ -158,12 +160,12 @@ function searchCrop() {
     // Display popup with crop details
     if (cropDetails != null) {
         document.getElementById("popupTitle").innerHTML = cropDetails.name;
-        document.getElementById("popupDetails").innerHTML = `<div class = "grid"><br><span>🛒 Items Needed:</span><br> ► ` + cropDetails.items_needed.join(" • ") + `</div><div class = "grid"><br><span>🌪️ Atmosphere:</span><br> ► ` + cropDetails.atmosphere + `</div><div class = "grid"><br><span>⏳ Time Duration:</span><br> ► ` + cropDetails.time_duration + `</div><div class = "grid"><br><span>🌤️ Season:</span><br> ► ` + cropDetails.season + `</div><div class = "grid"><br><span>🌦️ Climate:</span><br> ► ` + cropDetails.climate + `</div>`;
+        document.getElementById("popupDetails").innerHTML = `<div class = "grid"><br><span>🛒 Items Needed:</span><br> ► ` + cropDetails.items_needed.join(" • ") + `</div><div class = "grid"><br><span>🌪️ Atmosphere:</span><br> ► ` + cropDetails.atmosphere + `</div><div class = "grid"><br><span>⏳ Time to grow:</span><br> ► ` + cropDetails.time_duration + `</div><div class = "grid"><br><span>🌤️ Season:</span><br> ► ` + cropDetails.season + `</div><div class = "grid"><br><span>🌦️ Climate:</span><br> ► ` + cropDetails.climate + `</div>`;
         document.documentElement.classList.add("popup-open");
     }
     else{
         document.getElementById("popupTitle").innerHTML = "Nothing Found";
-        document.getElementById("popupDetails").innerHTML = "Go away";
+        document.getElementById("popupDetails").innerHTML = "Information about this crop is not available yet but will be in the future.";
         document.documentElement.classList.add("popup-open");
     }
 }

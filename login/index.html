@@ -43,7 +43,7 @@
                     <div class="search-box">
                       <i class="fa-solid fa-location-dot"></i>
                       <input id="search-field" type="text" placeholder="Enter your location">
-                      <button class="fa-solid fa-magnifying-glass"></button>
+                      <button class="fa-solid fa-magnifying-glass" id="weatherButton"></button>
                     </div>
                     <div class="not-found">
                       <img src="../images/404.png" alt="">
@@ -123,7 +123,7 @@
       <h2 class="searchText">Learn about what you want to grow....</h2>
       <form>
         <input type="text" placeholder="Enter a crop name..." id="cropSearch">
-        <button onclick="searchCrop()" type="submit">Search</button>
+        <a href="#" id="searchCropbar">Search</a>
         <div id="searchPop">
           <div id="popupContent">
             <div id="popupTitle"></div>

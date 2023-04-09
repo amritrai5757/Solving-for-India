@@ -300,6 +300,20 @@ button[type="submit"]:hover {
     background-color: #ff7f6d;
 }
 
+#searchCropbar{
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #40a0ee;
+    width: 100px;
+    height: 110%;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 50px 50px 0px;
+}
+
 #searchPop {
 	display: none;
 	position: fixed;
@@ -344,7 +358,7 @@ button[type="submit"]:hover {
     width: 100%;
     display: inline-grid;
     grid-template-columns: auto auto auto;
-    color: red;
+    color: rgb(255, 104, 104);
 }
 
 .grid{
@@ -353,6 +367,7 @@ button[type="submit"]:hover {
 }
 
 #popupDetails span{
+    color: #577f36;
     text-align: justify;
     font-size: 30px;
     /* padding: 5px; */
