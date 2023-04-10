@@ -7,9 +7,14 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<!-- <a href="login/index.html" class="homepage"><i class="fas fa-home"></i></a> -->
+	<!-- <h1>OAuth google signin</h1> -->
+	<!-- <button onclick="signIn()">Sign in with google</button> -->
 	<img class="wave" src="images/wave.png">
 	<div class="container">
 		<div class="img">
@@ -22,10 +27,11 @@
            		<div class="i">
 					 <img src="images/google.png">
            		</div>
-				<input type="submit" class="btn" value="Login With Google">
             </form>
+			<button type="submit" class="btn" onclick="signIn()" >Login With Google</button>
         </div>
     </div>
     <script type="text/javascript" src="js/login.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
