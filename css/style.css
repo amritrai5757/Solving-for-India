@@ -664,7 +664,8 @@ button[type="submit"]:hover {
     height: auto;
     /* background-image: url(images/background3.png); */
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .stats1 p {
@@ -1308,7 +1309,7 @@ button[type="submit"]:hover {
 
     #popupContent {
         padding: 40px 10px 10px 30px;
-        height: 80%;
+        height: 90%;
         position: absolute;
         color: black;
         top: 50%;
