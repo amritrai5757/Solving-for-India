@@ -1309,7 +1309,7 @@ button[type="submit"]:hover {
 
     #popupContent {
         padding: 40px 10px 10px 30px;
-        height: 90%;
+        height: auto;
         position: absolute;
         color: black;
         top: 50%;
