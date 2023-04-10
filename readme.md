@@ -1,4 +1,5 @@
 # KhetiFy
+# khetify.netlify.app
 
 This project is for GeeksForGeeks solving for India Hackathon.
 
