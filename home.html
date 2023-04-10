@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -9,16 +12,17 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <title>KhetiFy</title>
 </head>
 
 <body>
+   
   <header class="header">
     <nav class="navbar">
       <a href="#" class="nav-logo">
-        <img class="logo" src="../images/logo.png" alt="">
+        <img class="logo" src="images/logo.png" alt="">
       </a>
       <ul class="nav-menu">
         <li class="nav-item">
@@ -28,14 +32,14 @@
           <a href="#about" class="nav-link">About</a>
         </li>
         <li class="nav-item">
-          <a href="../Contact/index.html" class="nav-link">Feedback</a>
+          <a href="Contact/index.html" class="nav-link">Feedback</a>
         </li>
         <li class="nav-item">
           <a href="#footer" class="nav-link">Contact</a>
         </li>
         <div class="icons">
           <li class="nav-item" id="weather">
-            <a href="#"><img class="weather" src="../images/weather.png" alt=""></a>
+            <a href="#"><img class="weather" src="images/weather.png" alt=""></a>
             <div class="popup">
               <div class="popup-content">
                 <div id="mainBody">
@@ -46,7 +50,7 @@
                       <button class="fa-solid fa-magnifying-glass" id="weatherButton"></button>
                     </div>
                     <div class="not-found">
-                      <img src="../images/404.png" alt="">
+                      <img src="images/404.png" alt="">
                       <p>
                         Oppsies!! Not Found :/ LMAO!
                       </p>
@@ -79,7 +83,7 @@
           </li>
           <div class="popup-overlay"></div>
           <li class="nav-item" id="langLink">
-            <a href="#"><img class="lang" src="../images/lang.png" alt=""></a>
+            <a href="#"><img class="lang" src="images/lang.png" alt=""></a>
             <div id="langPop">
               <div class="popup-buttons">
                 <button class="english"><a href="#" class="langBtn">English</a></button>
@@ -87,12 +91,15 @@
               </div>
             </div>
           </li>
+          <!-- <h2 id="name"></h2> -->
+          <!-- <img id ="image"/> -->
+          <!-- <button onclick="logout()">logout</button> -->
           <li class="nav-item popup-link-1">
-            <a href="#"><img class="priflileImg" src="../images/profile.png" alt=""></a>
+            <a href="#"><img class="priflileImg" src="images/profile.png" alt=""></a>
             <div class="popup-card-1">
-              <img src="../images/avatar.svg" alt="Profile Image" class="profile-image-1">
-              <h3 class="name-1">John Doe</h3>
-              <button class="logout-btn-1">Logout</button>
+              <img id ="image" alt="Profile Image" class="profile-image-1">
+              <h3 class="name-1" id="name"></h3>
+              <button class="logout-btn-1" onclick="logout()" >Logout</button>
             </div>
           </li>
         </div>
@@ -108,7 +115,7 @@
 
   <section class="landing">
     <div>
-      <div class="cow"><img src="../images/cow.png" alt=""></div>
+      <div class="cow"><img src="images/cow.png" alt=""></div>
       <h1 class="title">KhetiFy</h1>
       <p>“Cultivate the land, harvest a future"</p>
     </div>
@@ -204,7 +211,7 @@
   <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank">
     <div class="bubble">
       <div class="bubble-icon">
-        <img src="../images/comment.svg" alt="">
+        <img src="images/comment.svg" alt="">
         Chat with Ai
       </div>
     </div>
@@ -238,7 +245,7 @@
       <ul class="menu">
         <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
         <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
-        <li class="menu__item"><a class="menu__link" href="../Contact/index.html">Feedback</a></li>
+        <li class="menu__item"><a class="menu__link" href="Contact/index.html">Feedback</a></li>
 
       </ul>
       <p>&copy;2023 KhetiFy | All Rights Reserved</p>
@@ -249,7 +256,49 @@
   </section>
 
   <script src="https://kit.fontawesome.com/d567ec31b5.js" crossorigin="anonymous"></script>
-  <script src="../js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    let params={}
+    let regex=/([^&=]+)=([^&]*)/g,m;
+    while(m=regex.exec(location.href)){
+        params[decodeURIComponent(m[1])]=decodeURIComponent(m[2]);
+    }
+    if(Object.keys(params).length>0){
+        localStorage.setItem('authInfo',JSON.stringify(params))
+    }
+
+    window.history.pushState({},document.title,"/"+"home.html");
+
+    let info=JSON.parse(localStorage.getItem('authInfo'));
+    console.log(JSON.parse(localStorage.getItem('authInfo')))
+    console.log(info['access_token'])
+    console.log(info['expired_in'])
+   
+    fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
+        headers:{
+            "Authorization":`Bearer ${info['access_token']}`
+        }
+    })
+    .then((data)=>data.json())
+    .then((info)=>{
+        console.log(info)
+        document.getElementById('name').innerHTML += info.name
+        document.getElementById('image').setAttribute('src',info.picture)
+    })
+
+    function logout(){
+        fetch("https://oauth2.googleapis.com/revoke?token="+info['access_token'],{
+            method:'POST',
+            headers:{
+                'Content-type':'application/x-www-form-urlencoded'
+            }
+        })
+        .then((data=>{
+            location.href="http://localhost:5500/index.html"
+        }))
+    }
+</script>
+
 </body>
 
 </html>
