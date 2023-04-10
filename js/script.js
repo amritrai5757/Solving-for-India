@@ -180,3 +180,32 @@ window.addEventListener("click", function (event) {
         closePopup();
     }
 });
+
+
+//profile button popup
+// Get the popup wrapper, link, and card elements
+const popupLink1 = document.querySelector('.popup-link-1');
+const popupCard = document.querySelector('.popup-card-1');
+
+// Add a click event listener to the link
+popupLink1.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (popupCard.style.display === 'block') {
+        popupCard.style.display = 'none';
+    } else {
+        popupCard.style.display = 'block';
+        const linkRect = popupLink1.getBoundingClientRect();
+        popupCard.style.top = linkRect.bottom + 'px';
+        popupCard.style.left = linkRect.left + 'px';
+    }
+});
+
+popupCard.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+document.addEventListener('click', (event) => {
+    if (!popupLink1.contains(event.target) && !popupCard.contains(event.target)) {
+        popupCard.style.display = 'none';
+    }
+});
