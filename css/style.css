@@ -21,6 +21,10 @@ body {
     background-size: cover;
 }
 
+::selection { 
+    background: rgb(236, 236, 89);
+}
+
 li {
     list-style: none;
 }
