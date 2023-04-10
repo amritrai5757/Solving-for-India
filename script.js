@@ -7,7 +7,7 @@ function signIn() {
 
     let params={
         'client_id': '876687008029-tl0urc99daktf4b18bdg3qpujcqu40ct.apps.googleusercontent.com',
-        'redirect_uri': 'https://taupe-pixie-06a1f5.netlify.app/home.html',
+        'redirect_uri': 'https://khetify.netlify.app/home.html',
         'response_type': 'token',
         "scope": "https://www.googleapis.com/auth/userinfo.profile",
         "include_granted_scopes": "true",
