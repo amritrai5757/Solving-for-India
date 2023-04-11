@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
@@ -174,16 +175,15 @@
   <!-- StatsSection -->
   <section class="stats">
     <div class="stats1">
-      <p>
-        Plant Growth Activity
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa porro possimus nulla dolores repellat error ut,
-        ipsa labore ad placeat dolor animi maxime commodi rem ipsum molestiae ullam praesentium. Minus eum quia enim
-        officia dolor? Vitae perspiciatis temporibus magnam! Harum fugit tenetur eum laboriosam a excepturi eaque
-        officiis consectetur, accusantium eveniet, incidunt, similique laborum et dolor itaque ea voluptas sequi quia
-        quo mollitia doloribus!
-      </p>
+      <canvas id="myChart"></canvas>
     </div>
   </section>
+
+  <!-- About team -->
+  <section class="meetTeam">
+    <button class="teamBtn" style="vertical-align:middle" onclick="window.location.href = 'about/index.html';"><span>Meet the team </span></button>
+  </section>
+
 
   <!-- popup caht -->
   <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank">
@@ -221,8 +221,8 @@
           </a></li>
       </ul>
       <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-        <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#" target="_blank">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="about/index.html">About</a></li>
         <li class="menu__item"><a class="menu__link" href="Contact/index.html">Feedback</a></li>
 
       </ul>
