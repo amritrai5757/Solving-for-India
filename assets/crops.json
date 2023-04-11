@@ -239,6 +239,394 @@
             "time_duration": "2-3 months",
             "season": "spring",
             "climate": "temperate"
+        },
+        {
+            "name": "Broccoli",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Cauliflower",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Spinach",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "1-2 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Kale",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Artichoke",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "mild",
+            "time_duration": "8-10 months",
+            "season": "spring",
+            "climate": "temperate"
+        },
+        {
+            "name": "Asparagus",
+            "items_needed": [
+                "crowns",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 years",
+            "season": "spring",
+            "climate": "temperate"
+        },
+        {
+            "name": "Brussels Sprouts",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 months",
+            "season": "fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Celery",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "3-4 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Cucumber",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water",
+                "trellis or stake"
+            ],
+            "atmosphere": "warm and moist",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "temperate"
+        },
+        {
+            "name": "Eggplant",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and moist",
+            "time_duration": "3-4 months",
+            "season": "summer",
+            "climate": "tropical"
+        },
+        {
+            "name": "Garlic",
+            "items_needed": [
+                "cloves",
+                "compost",
+                "water"
+            ],
+            "atmosphere": "cool and dry",
+            "time_duration": "7-8 months",
+            "season": "fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Ginger",
+            "items_needed": [
+                "rhizomes",
+                "compost",
+                "water"
+            ],
+            "atmosphere": "warm and humid",
+            "time_duration": "8-10 months",
+            "season": "spring or fall",
+            "climate": "tropical"
+        },
+        {
+            "name": "Leeks",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "4-5 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Okra",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and humid",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "tropical"
+        },
+        {
+            "name": "Peppers",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "tropical or subtropical"
+        },
+        {
+            "name": "Radish",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "1-2 months",
+            "season": "spring or fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Squash",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water",
+                "trellis or stake"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "tropical or subtropical"
+        },
+        {
+            "name": "Sweet Potato",
+            "items_needed": [
+                "slips",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and humid",
+            "time_duration": "3-4 months",
+            "season": "summer",
+            "climate": "tropical or subtropical"
+        },
+        {
+            "name": "Zucchini",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water",
+                "trellis or stake"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "tropical or subtropical"
+        },
+        {
+            "name": "Potato",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "3-4 months",
+            "season": "spring",
+            "climate": "temperate"
+        },
+        {
+            "name": "Soybean",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and dry",
+            "time_duration": "2-4 months",
+            "season": "summer",
+            "climate": "temperate"
+        },
+        {
+            "name": "Tomato",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "temperate"
+        },
+        {
+            "name": "Banana",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and humid",
+            "time_duration": "9-12 months",
+            "season": "summer",
+            "climate": "tropical"
+        },
+        {
+            "name": "Apple",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "3-6 years",
+            "season": "fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Orange",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "9-12 months",
+            "season": "winter",
+            "climate": "tropical"
+        },
+        {
+            "name": "Grape",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-4 years",
+            "season": "fall",
+            "climate": "temperate"
+        },
+        {
+            "name": "Peanut",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and dry",
+            "time_duration": "4-5 months",
+            "season": "summer",
+            "climate": "tropical"
+        },
+        {
+            "name": "Avocadoes",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and humid",
+            "time_duration": "2-3 years",
+            "season": "spring",
+            "climate": "tropical"
+        },
+        {
+            "name": "Strawberry",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "3-5 months",
+            "season": "spring",
+            "climate": "temperate"
+        },
+        {
+            "name": "Carrot",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "cool and moist",
+            "time_duration": "2-3 months",
+            "season": "spring",
+            "climate": "temperate"
+        },
+        {
+            "name": "Cucumbers",
+            "items_needed": [
+                "seeds",
+                "fertilizer",
+                "water",
+                "trellis or stake"
+            ],
+            "atmosphere": "warm and moist",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "temperate"
+        },
+        {
+            "name": "Pepper",
+            "items_needed": [
+                "seeds or seedlings",
+                "fertilizer",
+                "water"
+            ],
+            "atmosphere": "warm and sunny",
+            "time_duration": "2-3 months",
+            "season": "summer",
+            "climate": "tropical or subtropical"
         }
     ]
 }

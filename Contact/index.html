@@ -18,14 +18,14 @@
         <div class="title">
             <h1>Feedback form</h1>
         </div>
-        <form action="https://formspree.io/f/xyylgpkr" method="POST" id="my-form">
+        <form action="" class="contact_form grid" onsubmit="sendEmail(); reset(); return false;" id="my-form">
             <div class="contact-form">
 
 
                 <div class="input-fields">
-                    <input type="text" class="input" placeholder="Name" name="name">
-                    <input type="text" class="input" placeholder="Email Address" name="email">
-                    <input type="text" class="input" placeholder="Phone" name="phone">
+                    <input type="text" class="input" placeholder="Name" id="name" name="name">
+                    <input type="text" class="input" placeholder="Email Address" id="email" name="email">
+                    <input type="text" class="input" placeholder="Phone" id="phone" name="phone">
                     <div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
                         <label for="star5" title="text">5 stars</label>
@@ -40,13 +40,13 @@
                     </div>
                 </div>
                 <div class="msg">
-                    <textarea placeholder="Type your feedback" name="text"></textarea>
-                    <div class="btn"><button type="submit">SEND</button></div>
+                    <textarea placeholder="Type your feedback" id="message" name="text"></textarea>
+                    <div class="btn"><button type="sumbit">SEND</button></div>
                 </div>
             </div>
         </form>
     </div>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://kit.fontawesome.com/73e96bc1b0.js" crossorigin="anonymous"></script>
     <script src="../js/contact.js"></script>
 </body>
