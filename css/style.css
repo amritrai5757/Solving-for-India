@@ -332,6 +332,7 @@ a {
     flex-direction: column;
     padding: 50px;
     margin: 20px;
+    backdrop-filter: blur(3px);
 }
 
 .aboutTitle {
@@ -721,6 +722,7 @@ button[type="submit"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(3px);
 }
 
 .stats1 p {
@@ -1076,6 +1078,7 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    backdrop-filter: blur(3px);
 }
 
 .teamBtn {
