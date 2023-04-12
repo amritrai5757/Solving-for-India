@@ -308,6 +308,13 @@
           location.href = "https://khetify.netlify.app/index.html"
         }))
     }
+
+    //write a event listener which triggers when website loads and checks if user is logged in or not & if not then redirect to login page i,e index.html
+    window.addEventListener('load', () => {
+      if (localStorage.getItem('authInfo') == null) {
+        location.href = "https://khetify.netlify.app/index.html"
+      }
+    })
   </script>
 
 </body>
