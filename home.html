@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <nav class="navbar">
       <a href="#" class="nav-logo">
@@ -39,6 +38,9 @@
           <a href="#footer" class="nav-link">Contact</a>
         </li>
         <div class="icons">
+
+          <!-- Weather Widget -->
+
           <li class="nav-item" id="weather">
             <a href="#"><img class="weather" src="images/weather.png" alt=""></a>
             <div class="popup">
@@ -82,6 +84,9 @@
               </div>
             </div>
           </li>
+
+          <!-- Language widget -->
+
           <div class="popup-overlay"></div>
           <li class="nav-item" id="langLink">
             <a href="#"><img class="lang" src="images/lang.png" alt=""></a>
@@ -95,6 +100,9 @@
           <!-- <h2 id="name"></h2> -->
           <!-- <img id ="image"/> -->
           <!-- <button onclick="logout()">logout</button> -->
+
+          <!-- Loguout widget -->
+
           <li class="nav-item popup-link-1">
             <a href="#"><img class="priflileImg" src="images/profile.png" alt=""></a>
             <div class="popup-card-1">
@@ -114,6 +122,10 @@
     </nav>
   </header>
 
+
+  <!-- Landing Page -->
+
+
   <section class="landing">
     <div>
       <div class="cow"><img src="images/cow.png" alt=""></div>
@@ -121,7 +133,11 @@
       <p class="landingText">“Cultivate the land, harvest a future"</p>
     </div>
   </section>
+
+
   <!-- aboutSection -->
+
+  
   <section class="about" id="about">
     <h1 class="aboutTitle reveal">About</h1>
     <p class="aboutText reveal">
@@ -148,7 +164,10 @@
     </div>
   </section>
 
+
   <!-- manageSection -->
+
+
   <section class="manage">
     <div class="managediv reveal">
       <h3 class="titlePosition2">Manage your Farm!</h3>
@@ -172,17 +191,22 @@
         </ul>
       </nav>
     </div>
-
   </section>
 
+
   <!-- StatsSection -->
+
+
   <section class="stats">
     <div class="stats1">
       <canvas id="myChart"></canvas>
     </div>
   </section>
 
+
   <!-- About team -->
+
+
   <section class="meetTeam">
     <button class="teamBtn" style="vertical-align:middle"
       onclick="window.location.href = 'about/index.html';"><span>Meet the team </span></button>
@@ -190,6 +214,8 @@
 
 
   <!-- popup caht -->
+
+
   <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank">
     <div class="bubble">
       <div class="bubble-icon">
@@ -200,7 +226,6 @@
   </a>
 
 
-  <!-- footerSection -->
   <!-- footerSection -->
   <section class="foot" id="footer">
     <footer class="footer">
@@ -235,8 +260,9 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
   </section>
+
+  <!-- JAVASCRIPTS -->
 
   <script src="https://kit.fontawesome.com/d567ec31b5.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
@@ -280,7 +306,6 @@
           location.href = "https://khetify.netlify.app/index.html"
         }))
     }
-
   </script>
 
 </body>
