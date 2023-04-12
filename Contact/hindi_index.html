@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>खेतीफाई प्रतिक्रिया फॉर्म</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+</head>
+
+<div class="bg-image"></div>
+
+<body>
+
+    <a href="../hindi_home.html" class="homepage"><i class="fas fa-home"></i></a>
+
+    <div class="wrapper">
+        <div class="title">
+            <h1>प्रतिक्रिया फॉर्म</h1>
+        </div>
+        <form action="" class="contact_form grid" onsubmit="sendEmail(); reset(); return false;" id="my-form">
+            <div class="contact-form">
+
+
+                <div class="input-fields">
+                    <input type="text" class="input" placeholder="नाम" id="name" name="name">
+                    <input type="text" class="input" placeholder="ईमेल पता" id="email" name="email">
+                    <input type="text" class="input" placeholder="फोन" id="phone" name="phone">
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+                <div class="msg">
+                    <textarea placeholder="अपना फ़ीडबैक लिखें" id="message" name="text"></textarea>
+                    <div class="btn"><button type="sumbit">भेजें</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://kit.fontawesome.com/73e96bc1b0.js" crossorigin="anonymous"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>
