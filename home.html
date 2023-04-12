@@ -19,7 +19,11 @@
 </head>
 
 <body>
-   
+
+
+  <!-- NAVBAR AND HEADER -->
+
+
   <header class="header">
     <nav class="navbar">
       <a href="#" class="nav-logo">
@@ -39,6 +43,9 @@
           <a href="#footer" class="nav-link">Contact</a>
         </li>
         <div class="icons">
+
+          <!-- Weather Widget -->
+
           <li class="nav-item" id="weather">
             <a href="#"><img class="weather" src="images/weather.png" alt=""></a>
             <div class="popup">
@@ -82,6 +89,9 @@
               </div>
             </div>
           </li>
+
+          <!-- Language widget -->
+
           <div class="popup-overlay"></div>
           <li class="nav-item" id="langLink">
             <a href="#"><img class="lang" src="images/lang.png" alt=""></a>
@@ -95,12 +105,15 @@
           <!-- <h2 id="name"></h2> -->
           <!-- <img id ="image"/> -->
           <!-- <button onclick="logout()">logout</button> -->
+
+          <!-- Loguout widget -->
+
           <li class="nav-item popup-link-1">
             <a href="#"><img class="priflileImg" src="images/profile.png" alt=""></a>
             <div class="popup-card-1">
-              <img id ="image" alt="Profile Image" class="profile-image-1">
+              <img id="image" alt="Profile Image" class="profile-image-1">
               <h3 class="name-1" id="name"></h3>
-              <button class="logout-btn-1" onclick="logout()" >Logout</button>
+              <button class="logout-btn-1" onclick="logout()">Logout</button>
             </div>
           </li>
         </div>
@@ -113,6 +126,10 @@
       </div>
     </nav>
   </header>
+
+
+  <!-- Landing Page -->
+
 
   <section class="landing">
     <div>
@@ -148,7 +165,10 @@
     </div>
   </section>
 
+
   <!-- manageSection -->
+
+
   <section class="manage">
     <div class="managediv reveal">
       <h3 class="titlePosition2">Manage your Farm!</h3>
@@ -172,23 +192,31 @@
         </ul>
       </nav>
     </div>
-    
   </section>
 
+
   <!-- StatsSection -->
+
+
   <section class="stats">
     <div class="stats1">
       <canvas id="myChart"></canvas>
     </div>
   </section>
 
+
   <!-- About team -->
+
+
   <section class="meetTeam">
-    <button class="teamBtn" style="vertical-align:middle" onclick="window.location.href = 'about/index.html';"><span>Meet the team </span></button>
+    <button class="teamBtn" style="vertical-align:middle"
+      onclick="window.location.href = 'about/index.html';"><span>Meet the team </span></button>
   </section>
 
 
   <!-- popup caht -->
+
+
   <a href="https://chat-gpt-eight-gold.vercel.app/" target="_blank">
     <div class="bubble">
       <div class="bubble-icon">
@@ -200,8 +228,14 @@
 
 
   <!-- footerSection -->
+<<<<<<< HEAD
   <!-- footerSection -->
   <section class="foot" id="footer">
+=======
+
+
+  <section class="foot reveal" id="footer">
+>>>>>>> 21aa027 (labled sections with comments)
     <footer class="footer">
       <div class="waves">
         <div class="wave" id="wave1"></div>
@@ -210,14 +244,26 @@
         <div class="wave" id="wave4"></div>
       </div>
       <ul class="social-icon">
+<<<<<<< HEAD
         <li class="social-icon__item"><a class="social-icon__link" href="mailto:solvingforindiagfg@gmail.com" target="_blank">
           <ion-icon name="mail-outline"></ion-icon>
+=======
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="mail-outline"></ion-icon>
+>>>>>>> 21aa027 (labled sections with comments)
           </a></li>
         <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/Khetify_?t=AZL4iuIA_3RM6S8SHgj4OA&s=08" target="_blank">
             <ion-icon name="logo-twitter"></ion-icon>
           </a></li>
+<<<<<<< HEAD
           </a></li>
         <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/kheti.fy/?igshid=ZDdkNTZiNTM%3D" target="_blank">
+=======
+        <!-- <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon> -->
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+>>>>>>> 21aa027 (labled sections with comments)
             <ion-icon name="logo-instagram"></ion-icon>
           </a></li>
       </ul>
@@ -231,52 +277,53 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
   </section>
+
+  <!-- JAVASCRIPTS -->
 
   <script src="https://kit.fontawesome.com/d567ec31b5.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script>
-    let params={}
-    let regex=/([^&=]+)=([^&]*)/g,m;
-    while(m=regex.exec(location.href)){
-        params[decodeURIComponent(m[1])]=decodeURIComponent(m[2]);
+    let params = {}
+    let regex = /([^&=]+)=([^&]*)/g, m;
+    while (m = regex.exec(location.href)) {
+      params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
     }
-    if(Object.keys(params).length>0){
-        localStorage.setItem('authInfo',JSON.stringify(params))
+    if (Object.keys(params).length > 0) {
+      localStorage.setItem('authInfo', JSON.stringify(params))
     }
 
-    window.history.pushState({},document.title,"/"+"home.html");
+    window.history.pushState({}, document.title, "/" + "home.html");
 
-    let info=JSON.parse(localStorage.getItem('authInfo'));
+    let info = JSON.parse(localStorage.getItem('authInfo'));
     console.log(JSON.parse(localStorage.getItem('authInfo')))
     console.log(info['access_token'])
     console.log(info['expired_in'])
-   
-    fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
-        headers:{
-            "Authorization":`Bearer ${info['access_token']}`
-        }
+
+    fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+      headers: {
+        "Authorization": `Bearer ${info['access_token']}`
+      }
     })
-    .then((data)=>data.json())
-    .then((info)=>{
+      .then((data) => data.json())
+      .then((info) => {
         console.log(info)
         document.getElementById('name').innerHTML += info.name
-        document.getElementById('image').setAttribute('src',info.picture)
-    })
+        document.getElementById('image').setAttribute('src', info.picture)
+      })
 
-    function logout(){
-        fetch("https://oauth2.googleapis.com/revoke?token="+info['access_token'],{
-            method:'POST',
-            headers:{
-                'Content-type':'application/x-www-form-urlencoded'
-            }
-        })
-        .then((data=>{
-            location.href="https://khetify.netlify.app/index.html"
+    function logout() {
+      fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'], {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/x-www-form-urlencoded'
+        }
+      })
+        .then((data => {
+          location.href = "https://khetify.netlify.app/index.html"
         }))
     }
-</script>
+  </script>
 
 </body>
 
