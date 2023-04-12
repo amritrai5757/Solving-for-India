@@ -1,3 +1,11 @@
+/* color pallet */
+colors{
+    color: #00425A;
+    color: #1F8A70;
+    color: #BFDB38;
+    color: #FC7300;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -16,7 +24,7 @@ html {
 body {
     cursor: url(../images/cursor2.png), auto;
     height: auto;
-    background-image: url(../images/bck2.png);
+    background-image: url(../images/back4.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -35,7 +43,7 @@ a {
 
 .navbar {
     background: rgba(1, 7, 4, 0.63);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.628);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -175,7 +183,7 @@ a {
     display: none;
     width: 200px;
     height: auto;
-    background-color: #ba9500cf;
+    background-color: #c0db38e1;
     border: none;
     margin-top: 16px;
     padding: 20px;
@@ -234,13 +242,15 @@ a {
 .landing {
     height: 100vh;
     background-image: url(../images/background.jpg);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 50px rgb(0, 79, 0);
     /* background-color: #63d471;
     background-image: linear-gradient(315deg, #63d471 0%, #233329 74%); */
     display: flex;
     padding: 10%;
     justify-content: flex-start;
     align-items: center;
-    color: #b6b6b6;
+    color: #BFDB38;
     width: auto;
 }
 
@@ -319,8 +329,10 @@ a {
     flex-direction: column;
     border-radius: 20px;
     padding: 50px 200px 50px 200px;
-    background-color: #38cb447b;
+    background-color: #be6821da;
+    box-shadow: 0 0 25px #7c3800da;
     color: white;
+    text-align: center;
 }
 
 .searchText {
@@ -369,7 +381,8 @@ button[type="submit"]:hover {
     padding: 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #40a0ee;
+    background: #FC7300;
+    text-align: center;
     width: 100px;
     height: 110%;
     color: white;
@@ -377,6 +390,10 @@ button[type="submit"]:hover {
     border: none;
     cursor: pointer;
     border-radius: 0px 50px 50px 0px;
+}
+
+#searchCropbar:hover{
+    background: #fc7100e0;
 }
 
 #searchPop {
@@ -492,11 +509,23 @@ button[type="submit"]:hover {
 
 /* manageSection */
 .manage {
-    background-image: url(../images/manage.jpg);
+    background-image: url(../images/manage3.jpg);
+    /* background-color: #00425A; */
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: brightness();
+    box-shadow: 0px 0px 10px rgb(0, 12, 54);
+    backdrop-filter: blur();
 
+}
+
+.manage .managediv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
 }
 
 .titlePosition2 {
@@ -676,7 +705,7 @@ button[type="submit"]:hover {
 .stats1 {
     width: 80%;
     height: 70%;
-    background-color: #beffc1;
+    background-color: #BFDB38;
     border: 1px solid #ccc;
     padding: 5px;
     margin: 30px 30px 60px 30px;
@@ -714,7 +743,7 @@ button[type="submit"]:hover {
     position: relative;
     width: 100%;
     height: 20vh;
-    background: #318f3f;
+    background: #00425A;
     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% ); */
     min-height: 100px;
     padding: 20px 50px;
@@ -780,15 +809,17 @@ button[type="submit"]:hover {
     bottom: 20px;
     right: 20px;
     z-index: 1;
+    
 }
 
 .bubble-icon {
+    box-shadow: 0px 0px 20px rgb(104, 43, 0);
     color: rgb(223, 223, 223);
     font-size: 20px;
     width: 200px;
     height: 50px;
     border-radius: 50px;
-    background-color: rgba(255, 136, 0, 0.641);
+    background-color: #FC7300;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -845,7 +876,7 @@ button[type="submit"]:hover {
     position: relative;
     width: 400px;
     height: 105px;
-    background: #a8ffffa1;
+    background: #6fb5a3c1;
     padding: 20px 32px;
     overflow: hidden;
     border-radius: 18px;
@@ -1024,7 +1055,7 @@ button[type="submit"]:hover {
 .teamBtn {
     display: inline-block;
     border-radius: 10px;
-    background-color: #ff7449;
+    background-color: #fc7100d0;
     border: none;
     color: #ffffff;
     text-align: center;
@@ -1037,8 +1068,8 @@ button[type="submit"]:hover {
 }
 
 .teamBtn:hover {
-    background-color: #ff997a;
-    color: #cfcfcf;
+    background-color: #FC7300;
+    color: #ffff;
 }
 
 .teamBtn span {
