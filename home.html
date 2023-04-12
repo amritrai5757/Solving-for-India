@@ -315,6 +315,16 @@
         location.href = "https://khetify.netlify.app/index.html"
       }
     })
+
+    window.addEvenListener('load',()=>){
+      if(info==null || info==undefined ||info.name==undefined || info.name==null){
+        location.href = "https://khetify.netlify.app/index.html"
+      }
+    }
+    if(info==null || info.name==undefined || info.name==null || info==undefined){
+      location.href = "https://khetify.netlify.app/index.html"
+    }
+
   </script>
 
 </body>
