@@ -1,0 +1,18 @@
+/* app.css */
+  
+  /* Style all buttons to be hoverable and yellow */
+  button {
+    background-color: yellow;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  body {
+    background-color: green;
+  }
+  
+  button:hover {
+    transform: scale(1.2);
+    background-color: yellow;
+  }
+  
+  
