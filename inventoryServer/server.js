@@ -1,9 +1,14 @@
-const express = require('express');
-const cors = require("cors");
+// const express = require('express');
+import express from 'express';
+// const cors = require("cors");
+import cors from 'cors';
 const app = express();
 const port = 4000;
-const mongoose = require('mongoose');
-require('dotenv').config();
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+// require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config()
 const db_password = process.env.db_password;
 
 const db = `mongodb+srv://amritrai5757:${db_password}@cluster0.bwx4vyb.mongodb.net/khetifyDatabase?retryWrites=true&w=majority`;
@@ -32,7 +37,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+// module.exports = User;
 
 // Connect to MongoDB
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -166,4 +171,4 @@ app.put('/updatecrop/:email/:cropName', async (req, res) => {
   }
 });
     
-module.exports = app;
+// module.exports = app;
