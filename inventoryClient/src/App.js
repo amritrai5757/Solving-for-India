@@ -60,23 +60,21 @@ function App() {
   return (
 
     <div class="mainBody">
+      <h1 class="mainTitle">Inventory</h1>
       <div class="upper">
         <div class="section_1 section">
           <h1>Add to cart</h1>
           <form onSubmit={handleAddToCart}>
             <label>
-              Email:
-              <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label>
-              Crop name:
-              <input type="text" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
+              <input type="text" placeholder="Crop Name" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
             </label>
             <label>
-              Amount:
-              <input type="number" required value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
+              <input type="number" placeholder="Amount" required value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
             </label>
-            <button type="submit">Add to cart</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
 
@@ -84,67 +82,62 @@ function App() {
           <h1>Delete crop</h1>
           <form onSubmit={handleDeleteCrop}>
             <label>
-              Email:
-              <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label>
-              Crop name:
-              <input type="text" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
+              <input type="text" placeholder="Crop name" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
             </label>
-            <button type="submit">Delete crop</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
 
       <div class="lower">
         <div class="section_3 section">
-          <h1>Get cart</h1>
+          <h1>View cart</h1>
           <form onSubmit={handleGetCart}>
             <label>
-              Email:
-              <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
-            <button type="submit">Get cart</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
-
-        {cart.length > 0 && (
-          <ul>
-            {cart.map((item, index) => (
-              <li key={index}>
-                {item.cropName} - {item.amount}
-              </li>
-            ))}
-          </ul>
-        )}
 
         <div class="section_4 section">
           <h1>Update crop</h1>
           <form onSubmit={handleUpdateCrop}>
             <label>
-              Email:
-              <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label>
-              Crop name:
-              <input type="text" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
+              <input type="text" placeholder="Crop name" required value={cropName} onChange={(e) => setCropName(e.target.value)} />
             </label>
             <label>
-              New crop name:
-              <input type="text" required value={newCropName} onChange={(e) => setNewCropName(e.target.value)} />
+              <input type="text" required placeholder="new crop name" value={newCropName} onChange={(e) => setNewCropName(e.target.value)} />
             </label>
             <label>
-              Amount:
-              <input type="number" required value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
+              <input type="number" placeholder="Amount" required value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
             </label>
-            <button type="submit">Update crop</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
+      <div class="popUp">
+        <h2>Item:</h2>
+          {cart.length > 0 && (
+            <ul>
+              {cart.map((item, index) => (
+                <li key={index}>
+                  {item.cropName} : {item.amount}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
 
 
 
-      <p>{message}</p>
+      <p class="alert">{message}</p>
     </div>
   );
 }
