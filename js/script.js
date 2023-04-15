@@ -212,71 +212,71 @@ document.addEventListener('click', (event) => {
 
 // //BAR GRAPH
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'bb2eae5163mshadf2af2a8ed6e3ap19c852jsn97dcc9d3a1c9',
-// 		'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
-// 	}
-// };
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a9bf22ceb2mshd6dff02899e4908p162638jsn00a4ce0240dd',
+		'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
+	}
+};
 
-// const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON'];
-// // const cropNames = ['WHEAT'];
+const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON'];
+// const cropNames = ['WHEAT'];
 
-// const cropPrices = [];
-// Promise.all(cropNames.map(crop => {
-// 	return fetch(`https://commodity-rates-api.p.rapidapi.com/latest?base=USD&symbols=${crop}`, options)
-// 		.then(response => response.json())
-// 		.then(response => {
-// 			// Convert the price to USD
-// 			const priceInUSD = (1 / response.data.rates[crop]) * 80;
+const cropPrices = [];
+Promise.all(cropNames.map(crop => {
+	return fetch(`https://commodity-rates-api.p.rapidapi.com/latest?base=USD&symbols=${crop}`, options)
+		.then(response => response.json())
+		.then(response => {
+			// Convert the price to USD
+			const priceInUSD = (1 / response.data.rates[crop]) * 80;
 
-// 			// Add the crop name and price to the array
-// 			cropPrices.push({
-// 				name: crop,
-// 				price: priceInUSD
-// 			});
-// 		});
-// }))
-// .then(() => {
-// 	// Sort the crop prices by ascending order
-// 	cropPrices.sort((a, b) => a.price - b.price);
-// 	// Create the bar chart
-// 	const ctx = document.getElementById('myChart').getContext('2d');
-// 	const myChart = new Chart(ctx, {
-// 		type: 'bar',
-// 		data: {
-// 			labels: cropPrices.map(crop => crop.name),
-// 			datasets: [{
-// 				label: 'Prices in ₹',
-// 				data: cropPrices.map(crop => crop.price),
-// 				backgroundColor: [
-// 					'rgba(255, 99, 132, 0.7)',
-// 					'rgba(54, 162, 235, 0.7)',
-// 					'rgba(255, 206, 86, 0.7)',
-// 					'rgba(75, 192, 192, 0.7)',
-// 					'rgba(153, 102, 255, 0.7)'
-// 				],
-// 				borderColor: [
-// 					'rgba(255, 99, 132, 1)',
-// 					'rgba(54, 162, 235, 1)',
-// 					'rgba(255, 206, 86, 1)',
-// 					'rgba(75, 192, 192, 1)',
-// 					'rgba(153, 102, 255, 1)'
-// 				],
-// 				borderWidth: 1
-// 			}]
-// 		},
-// 		options: {
-// 			scales: {
-// 				y: {
-// 					beginAtZero: true
-// 				}
-// 			}
-// 		}
-// 	});
-// })
-// .catch(err => console.error(err));
+			// Add the crop name and price to the array
+			cropPrices.push({
+				name: crop,
+				price: priceInUSD
+			});
+		});
+}))
+.then(() => {
+	// Sort the crop prices by ascending order
+	cropPrices.sort((a, b) => a.price - b.price);
+	// Create the bar chart
+	const ctx = document.getElementById('myChart').getContext('2d');
+	const myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: cropPrices.map(crop => crop.name),
+			datasets: [{
+				label: 'Prices in ₹',
+				data: cropPrices.map(crop => crop.price),
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.7)',
+					'rgba(54, 162, 235, 0.7)',
+					'rgba(255, 206, 86, 0.7)',
+					'rgba(75, 192, 192, 0.7)',
+					'rgba(153, 102, 255, 0.7)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+})
+.catch(err => console.error(err));
 
 //animation
 function reveal() {
