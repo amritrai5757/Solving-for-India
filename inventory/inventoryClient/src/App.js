@@ -128,7 +128,7 @@ function App() {
             <ul>
               {cart.map((item, index) => (
                 <li key={index}>
-                  {item.cropName} : {item.amount}
+                  {item.cropName} : {item.amount} kg
                 </li>
               ))}
             </ul>

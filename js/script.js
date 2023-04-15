@@ -163,7 +163,7 @@ function searchCrop() {
         document.getElementById("popupDetails").innerHTML = `<div class = "grid"><br><span>🛒 Items Needed:</span><br> ► ` + cropDetails.items_needed.join(" • ") + `</div><div class = "grid"><br><span>🌪️ Atmosphere:</span><br> ► ` + cropDetails.atmosphere + `</div><div class = "grid"><br><span>⏳ Time to grow:</span><br> ► ` + cropDetails.time_duration + `</div><div class = "grid"><br><span>🌤️ Season:</span><br> ► ` + cropDetails.season + `</div><div class = "grid"><br><span>🌦️ Climate:</span><br> ► ` + cropDetails.climate + `</div>`;
         document.documentElement.classList.add("popup-open");
     }
-    else{
+    else {
         document.getElementById("popupTitle").innerHTML = "Nothing Found";
         document.getElementById("popupDetails").innerHTML = "Information about this crop is not available yet but will be in the future.";
         document.documentElement.classList.add("popup-open");
@@ -213,11 +213,11 @@ document.addEventListener('click', (event) => {
 // //BAR GRAPH
 
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'a9bf22ceb2mshd6dff02899e4908p162638jsn00a4ce0240dd',
-		'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '68e8b8a36fmsh0b59d08aedeba72p1b3767jsn44fd156769e0',
+        'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
+    }
 };
 
 const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON'];
@@ -225,74 +225,74 @@ const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON'];
 
 const cropPrices = [];
 Promise.all(cropNames.map(crop => {
-	return fetch(`https://commodity-rates-api.p.rapidapi.com/latest?base=USD&symbols=${crop}`, options)
-		.then(response => response.json())
-		.then(response => {
-			// Convert the price to USD
-			const priceInUSD = (1 / response.data.rates[crop]) * 80;
+    return fetch(`https://commodity-rates-api.p.rapidapi.com/latest?base=USD&symbols=${crop}`, options)
+        .then(response => response.json())
+        .then(response => {
+            // Convert the price to USD
+            const priceInUSD = (1 / response.data.rates[crop]) * 80;
 
-			// Add the crop name and price to the array
-			cropPrices.push({
-				name: crop,
-				price: priceInUSD
-			});
-		});
+            // Add the crop name and price to the array
+            cropPrices.push({
+                name: crop,
+                price: priceInUSD
+            });
+        });
 }))
-.then(() => {
-	// Sort the crop prices by ascending order
-	cropPrices.sort((a, b) => a.price - b.price);
-	// Create the bar chart
-	const ctx = document.getElementById('myChart').getContext('2d');
-	const myChart = new Chart(ctx, {
-		type: 'bar',
-		data: {
-			labels: cropPrices.map(crop => crop.name),
-			datasets: [{
-				label: 'Prices in ₹',
-				data: cropPrices.map(crop => crop.price),
-				backgroundColor: [
-					'rgba(255, 99, 132, 0.7)',
-					'rgba(54, 162, 235, 0.7)',
-					'rgba(255, 206, 86, 0.7)',
-					'rgba(75, 192, 192, 0.7)',
-					'rgba(153, 102, 255, 0.7)'
-				],
-				borderColor: [
-					'rgba(255, 99, 132, 1)',
-					'rgba(54, 162, 235, 1)',
-					'rgba(255, 206, 86, 1)',
-					'rgba(75, 192, 192, 1)',
-					'rgba(153, 102, 255, 1)'
-				],
-				borderWidth: 1
-			}]
-		},
-		options: {
-			scales: {
-				y: {
-					beginAtZero: true
-				}
-			}
-		}
-	});
-})
-.catch(err => console.error(err));
+    .then(() => {
+        // Sort the crop prices by ascending order
+        cropPrices.sort((a, b) => a.price - b.price);
+        // Create the bar chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: cropPrices.map(crop => crop.name),
+                datasets: [{
+                    label: 'Prices in ₹',
+                    data: cropPrices.map(crop => crop.price),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(err => console.error(err));
 
 //animation
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
-  
+
     for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
     }
-  }
-  
-  window.addEventListener("scroll", reveal);
+}
+
+window.addEventListener("scroll", reveal);
