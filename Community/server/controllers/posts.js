@@ -1,6 +1,7 @@
-import Post from "../../Desktop/Community/server/models/Post.js";
-import User from "../../Desktop/Community/server/models/User.js";
+import Post from "../models/Post.js";
+import User from "../models/User.js";
 
+/* CREATE */
 export const createPost = async (req, res) => {
   try {
     const { userId, description, picturePath } = req.body;
