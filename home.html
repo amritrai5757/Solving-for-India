@@ -309,7 +309,8 @@
     }
     const inventoryButton = document.getElementById('inventory-button');
     inventoryButton.addEventListener('click', () => {
-      const userEmail = localStorage.getItem('userEmail');
+      const userEmail = "hello";
+      // const userEmail = localStorage.getItem('userEmail');
       if (userEmail) {
         window.location.href = "https://khetify-inventory.vercel.app/?emaill=" + encodeURIComponent(userEmail);
       }
