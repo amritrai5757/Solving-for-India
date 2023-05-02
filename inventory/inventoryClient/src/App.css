@@ -13,7 +13,7 @@
   }
 
   body {
-    background-image: url(../../images/manage.png);
+    background-image: url(manage.png);
     backdrop-filter: blur(5px);
     background-color: rgb(213, 255, 213);
     color: #4CAF50;
