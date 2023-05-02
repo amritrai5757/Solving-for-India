@@ -214,10 +214,10 @@ document.addEventListener('click', (event) => {
 
 const options = {
     method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '68e8b8a36fmsh0b59d08aedeba72p1b3767jsn44fd156769e0',
-        'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
-    }
+	headers: {
+		'X-RapidAPI-Key': '99c8271435msh6cd0d182ea06065p12e5f7jsnf0e09f2ff64b',
+		'X-RapidAPI-Host': 'commodity-rates-api.p.rapidapi.com'
+	}
 };
 
 const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON'];
