@@ -9,6 +9,9 @@ function App() {
   const [newCropName, setNewCropName] = useState('');
   const [cart, setCart] = useState([]);
   const [message, setMessage] = useState('');
+  const urlParams = new URLSearchParams(window.location.search);
+  const email1 = urlParams.get('emaill');
+  console.log(email1);
 
   const handleAddToCart = async (e) => {
     e.preventDefault();

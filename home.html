@@ -137,7 +137,7 @@
 
   <!-- aboutSection -->
 
-  
+
   <section class="about" id="about">
     <h1 class="aboutTitle reveal">About</h1>
     <p class="aboutText reveal">
@@ -176,15 +176,13 @@
       <nav class=buttonDesign>
         <ul>
           <li class="viewButton" onclick="showInventory()">
-            <div class="button-contenttt"
-              onClick="window.location.href = 'http://localhost:3000/';">
+            <div class="button-contenttt" onClick="window.location.href = 'http://localhost:3000/';">
               View Inventory
             </div>
             <span></span><span></span><span></span><span></span>
           </li>
           <li class="chatButton" onclick="showChat()">
-            <div class="button-contenttt"
-              onclick="window.open(`http://localhost:3000/`,'mywindow');">
+            <div class="button-contenttt" onclick="window.open(`http://localhost:3000/`,'mywindow');">
               Community Chat
             </div>
             <span></span><span></span><span></span><span></span>
@@ -294,6 +292,7 @@
         console.log(info)
         document.getElementById('name').innerHTML += info.name
         document.getElementById('image').setAttribute('src', info.picture)
+        localStorage.setItem('userEmail', info.email);
       })
 
     function logout() {
@@ -304,9 +303,17 @@
         }
       })
         .then((data => {
+          localStorage.removeItem('userEmail');
           location.href = "https://khetify.netlify.app/index.html"
         }))
     }
+    const inventoryButton = document.getElementById('inventory-button');
+    inventoryButton.addEventListener('click', () => {
+      const userEmail = localStorage.getItem('userEmail');
+      if (userEmail) {
+        window.location.href = "https://khetify-inventory.vercel.app/?emaill=" + encodeURIComponent(userEmail);
+      }
+    });
   </script>
 
 </body>
