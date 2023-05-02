@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 // require('dotenv').config();
 import dotenv from 'dotenv';
 dotenv.config()
-const db_password = process.env.db_password;
+const db_password = "random123";
 
 const db = `mongodb+srv://amritrai5757:${db_password}@cluster0.bwx4vyb.mongodb.net/khetifyDatabase?retryWrites=true&w=majority`;
 app.use(cors());
