@@ -290,7 +290,7 @@
       .then((data) => data.json())
       .then((info) => {
         console.log(info)
-        console.log(info.email)
+        console.log(info.sub)
         document.getElementById('name').innerHTML += info.name
         document.getElementById('image').setAttribute('src', info.picture)
         localStorage.setItem('userEmail', info.email);
