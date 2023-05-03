@@ -140,7 +140,7 @@ function App() {
 
 
 
-      <p class="alert">{message}.....{email1}</p>
+      <p class="alert">{message}</p>
     </div>
   );
 }
