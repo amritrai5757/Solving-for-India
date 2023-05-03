@@ -10,8 +10,8 @@ function App() {
   const [cart, setCart] = useState([]);
   const [message, setMessage] = useState('');
   const urlParams = new URLSearchParams(window.location.search);
-  const email1 = urlParams.get('emaill');
-  console.log(email1);
+  const sub = urlParams.get('sub');
+  console.log(sub);
 
   const handleAddToCart = async (e) => {
     e.preventDefault();
