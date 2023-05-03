@@ -64,7 +64,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "https://khetify-community.vercel.app/auth/register",
+      "https://communityserver.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
