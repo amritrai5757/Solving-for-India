@@ -290,7 +290,6 @@
       .then((data) => data.json())
       .then((info) => {
         console.log(info)
-        console.log(info.sub)
         document.getElementById('name').innerHTML += info.name
         document.getElementById('image').setAttribute('src', info.picture)
         localStorage.setItem('userEmail', info.sub);
@@ -310,10 +309,9 @@
     }
     const inventoryButton = document.getElementById('inventory-button');
     inventoryButton.addEventListener('click', () => {
-      const userEmail = "hello";
-      // const userEmail = localStorage.getItem('userEmail');
+      const userEmail = localStorage.getItem('userEmail');
       if (userEmail) {
-        window.location.href = "https://khetify-inventory.vercel.app/?emaill=" + encodeURIComponent(userEmail);
+        window.location.href = "https://khetify-inventory.vercel.app?sub=" + encodeURIComponent(info.sub);
       }
     });
   </script>
