@@ -131,24 +131,11 @@ function App() {
         <h2>Item:</h2>
         {cart.length > 0 && (
           <ul>
-            {cart.length > 0 && (
-              <table>
-                <thead>
-                  <tr>
-                    <th>Crop Name</th>
-                    <th>Amount (kg)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cart.map((item, index) => (
-                    <tr key={index}>
-                      <td>{item.cropName}</td>
-                      <td>{item.amount}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
+            {cart.map((item, index) => (
+              <li key={index}>
+                {item.cropName} : {item.amount} kg
+              </li>
+            ))}
           </ul>
         )}
       </div>
