@@ -127,16 +127,25 @@ function App() {
           </form>
         </div>
       </div>
-      <div class="popUp">
+      <div class="table">
         <h2>Item:</h2>
         {cart.length > 0 && (
-          <ul>
-            {cart.map((item, index) => (
-              <li key={index}>
-                {item.cropName} : {item.amount} kg
-              </li>
-            ))}
-          </ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Crop Name</th>
+                <th>Amount (kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.cropName}</td>
+                  <td>{item.amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </div>
 
