@@ -123,7 +123,7 @@ function App() {
             <label>
               <input type="number" placeholder="Amount" required value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="scrollToDiv()">Submit</button>
           </form>
         </div>
       </div>
@@ -154,6 +154,11 @@ function App() {
       <p class="alert">{message}</p>
     </div>
   );
+}
+
+function scrollToDiv() {
+  var div = document.getElementById("table");
+  div.scrollIntoView({behavior: "smooth"});
 }
 
 export default App;
