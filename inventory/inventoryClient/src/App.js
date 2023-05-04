@@ -9,9 +9,11 @@ function App() {
   const [newCropName, setNewCropName] = useState('');
   const [cart, setCart] = useState([]);
   const [message, setMessage] = useState('');
+
   const urlParams = new URLSearchParams(window.location.search);
-  const sub = urlParams.get('sub');
-  console.log(sub);
+  const info = urlParams.get('info');
+  console.log(info);
+
 
   const handleAddToCart = async (e) => {
     e.preventDefault();
@@ -127,16 +129,16 @@ function App() {
       </div>
       <div class="popUp">
         <h2>Item:</h2>
-          {cart.length > 0 && (
-            <ul>
-              {cart.map((item, index) => (
-                <li key={index}>
-                  {item.cropName} : {item.amount} kg
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {cart.length > 0 && (
+          <ul>
+            {cart.map((item, index) => (
+              <li key={index}>
+                {item.cropName} : {item.amount} kg
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
 
 
 
