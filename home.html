@@ -293,7 +293,7 @@
         document.getElementById('name').innerHTML += info.name
         document.getElementById('image').setAttribute('src', info.picture)
         localStorage.setItem('userEmail', info.sub);
-        sub = info.sub;
+        sub = (info.sub).toSting();
       })
 
     function logout() {
