@@ -220,7 +220,7 @@ const options = {
 	}
 };
 
-const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON', 'SOYBEANS'];
+const cropNames = ['SUGAR', 'RICE', 'CORN', 'COTTON', 'MILK'];
 // const cropNames = ['WHEAT'];
 
 const cropPrices = [];
