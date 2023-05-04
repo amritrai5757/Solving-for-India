@@ -128,7 +128,7 @@ function App() {
         </div>
       </div>
       <div class="table">
-        <h2>Item:</h2>
+        <h2>Items:</h2>
         {cart.length > 0 && (
           <table>
             <thead>
