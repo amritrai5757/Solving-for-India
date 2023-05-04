@@ -139,7 +139,7 @@ function App() {
           </ul>
         )}
       </div>
-      <div>
+      <div class="table">
         {cart.length > 0 && (
           <table>
             <thead>
