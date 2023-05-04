@@ -86,12 +86,15 @@ body {
   overflow: hidden;
 }
 
+table{
+  border-radius: 20px;
+}
+
 th {
   text-shadow: 0 0 10px rgb(107, 107, 107);
-  margin: 1px;
   padding: 2px;
   font-weight: bold;
-  color: #444;
+  color: #ffffff;
   border-top: none;
 }
 
@@ -99,7 +102,7 @@ th,
 td {
   text-align: left;
   padding: 12px;
-  border: 1px solid #6d2100;
+  border: 1px solid #9c2f00;
 }
 
 tr:hover {
