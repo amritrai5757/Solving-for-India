@@ -14,6 +14,7 @@ function App() {
   const info = urlParams.get('info');
   console.log(info);
 
+
   const handleAddToCart = async (e) => {
     e.preventDefault();
     try {

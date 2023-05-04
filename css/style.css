@@ -51,6 +51,7 @@ a {
     position: fixed;
     font-family: 'Montserrat', sans-serif;
     z-index: 2;
+    width: 100%;
 }
 
 .logo {
