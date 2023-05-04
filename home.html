@@ -289,12 +289,10 @@
     })
       .then((data) => data.json())
       .then((info) => {
-        console.log(info)
         document.getElementById('name').innerHTML += info.name
         document.getElementById('image').setAttribute('src', info.picture)
         localStorage.setItem('userEmail', info.sub);
         const sub = info.sub;
-        console.log(sub);
       })
 
     function logout() {
