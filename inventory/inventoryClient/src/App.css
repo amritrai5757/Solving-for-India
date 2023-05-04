@@ -82,6 +82,12 @@
     margin-bottom: 5px;
   }
 
+  th{
+    text-shadow: 0 0 10px rgb(107, 107, 107);
+    margin: 1px;
+    padding: 2px;
+  }
+
   .popUp{
     background-color: #f8903aca;
     padding: 20px;
