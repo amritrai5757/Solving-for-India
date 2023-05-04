@@ -92,7 +92,6 @@ table{
 
 th {
   text-shadow: 0 0 10px rgb(107, 107, 107);
-  padding: 2px;
   font-weight: bold;
   color: #ffffff;
   border-top: none;
@@ -102,7 +101,7 @@ th,
 td {
   text-align: left;
   padding: 12px;
-  border: 1px solid #9c2f00;
+  border: 2px solid #9c2f00;
 }
 
 tr:hover {
@@ -184,6 +183,10 @@ button:hover {
   color: white;
   border-radius: 20px;
   padding: 5px 20px 5px 20px;
+}
+
+h2{
+  color: rgb(255, 132, 0);
 }
 
 @media only screen and (max-width: 420px) {
