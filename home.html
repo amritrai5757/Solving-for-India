@@ -310,7 +310,7 @@
     
     const inventoryButton = document.getElementById('inventoryButton');
     inventoryButton.addEventListener('click',function(){
-      window.location.href = 'https://khetify-inventory.vercel.app/?sub='+ encodeURIComponent(sub);
+      window.location.href = `https://khetify-inventory.vercel.app/?sub=${sub}`;
     });
     console.log(sub);
   </script>
