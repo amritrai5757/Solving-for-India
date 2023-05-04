@@ -139,6 +139,26 @@ function App() {
           </ul>
         )}
       </div>
+      <div>
+        {cart.length > 0 && (
+          <table>
+            <thead>
+              <tr>
+                <th>Crop Name</th>
+                <th>Amount (kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.cropName}</td>
+                  <td>{item.amount}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
 
 
 
