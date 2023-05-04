@@ -70,7 +70,7 @@ body {
   border-collapse: collapse;
   background-color: #f8903aca;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 50px;
   width: 80%;
   display: flex;
   align-items: center;
@@ -90,7 +90,6 @@ th {
   text-shadow: 0 0 10px rgb(107, 107, 107);
   margin: 1px;
   padding: 2px;
-  background-color: #f2f2f2;
   font-weight: bold;
   color: #444;
   border-top: none;
@@ -100,15 +99,11 @@ th,
 td {
   text-align: left;
   padding: 12px;
-  border: 1px solid #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+  border: 1px solid #6d2100;
 }
 
 tr:hover {
-  background-color: #ddd;
+  background-color: #23232321;
 }
 
 td:last-child {
